@@ -1,4 +1,6 @@
 {
     "hello":"hallo",
-    "title":"titel"
+    "title":"titel",
+    "german":"deutsch",
+    "english": "englisch"
 }

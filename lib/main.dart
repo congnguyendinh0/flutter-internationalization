@@ -1,7 +1,6 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 void main() {
@@ -10,7 +9,7 @@ void main() {
 saveLocale:true ,
 supportedLocales: [
   Locale('de','DE'),
-  Locale('en','EN'),
+  Locale('en','US'),
 ],
 ));
 }
@@ -23,7 +22,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.teal,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       localizationsDelegates: context.localizationDelegates,
@@ -70,12 +69,12 @@ class _MyHomePageState extends State<MyHomePage> {
               setState(() {
                 EasyLocalization.of(context).locale = Locale('de','DE');
               });
-            },child: Text('Deutsch'),),
+            },child: Text('german'.tr().toString()),),
             RaisedButton(onPressed: (){
               setState(() {
-                EasyLocalization.of(context).locale = Locale('en','EN');
+                EasyLocalization.of(context).locale = Locale('en','US');
               });
-            },child: Text('Englisch'),)
+            },child: Text('english'.tr().toString()),)
           ],)
         ],
       ),
